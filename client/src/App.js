@@ -19,10 +19,28 @@ const App = () => {
 
   return (
     <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">Memories</Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
-      </AppBar>
+      <header>
+  <div className="nav-wrapper">
+    <div className="logo-container">
+    <img className={classes.image} src={memories} alt="icon" height="60" />
+    </div>
+    <nav>
+      <input className="hidden" type="checkbox" id="menuToggle" />
+      <label className="menu-btn" htmlFor="menuToggle">
+        <div className="menu" />
+        <div className="menu" />
+        <div className="menu" />
+      </label>
+      <div className="nav-container">
+        <ul className="nav-tabs">
+          <li className="nav-tab">Library</li>
+          <li className="nav-tab">Authors</li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
       <Grow in>
         <Container>
           <Grid container justify="space-between" alignItems="stretch" spacing={3}>

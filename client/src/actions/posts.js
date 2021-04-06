@@ -1,6 +1,8 @@
-import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
+import { FETCH_ALL, CREATE, UPDATE, DELETE } from '../constants/actionTypes';
 
 import * as api from '../api/index.js';
+
+// Want it to throw books and authors as posts
 
 export const getPosts = () => async (dispatch) => {
   try {
